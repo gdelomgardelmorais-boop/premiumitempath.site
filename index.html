@@ -15,6 +15,25 @@
   gtag('config', 'AW-17748857623');
 </script>
 
+<!-- Event snippet for Click Oferta Neuro Surge conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17748857623/Z_-DCL2m_-0bEJemqI9C',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
     </head>
     <body>
         <h1>Powered by https://theminerx.com</h1>
